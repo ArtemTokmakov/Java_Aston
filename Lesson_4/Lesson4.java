@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class Lesson4 {
     
@@ -19,7 +20,7 @@ public class Lesson4 {
         fillArrayWithValues(hundredArray);
         
         int[] fillArray = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
-        multiplyByTwoIfLessThanSix(fillArray);
+        multiplyByTwo(fillArray);
         
         createSquareMatrix(4);
         createArray(5, 10); 
@@ -37,7 +38,9 @@ public class Lesson4 {
         int sum = a + b;
         if (sum >= 0) {
             System.out.println("Сумма положительная");
-        } else System.out.println("Сумма отрицательная");
+        } else {
+            System.out.println("Сумма отрицательная");
+        }
     }
 
 //Задание №3
@@ -47,9 +50,10 @@ public class Lesson4 {
             System.out.println("Красный");
         } else if (value > 0 && value <= 100) {
             System.out.println("Жёлтый");
-        } else if (value > 100) {                 // else System.out.println("Зелёный"); если условие приписывать неявно
+        } else {
             System.out.println("Зелёный");
-        }    
+        }
+           
     }
 
 //Задание №4
@@ -58,15 +62,14 @@ public class Lesson4 {
         int b = 9;
         if (a >= b) {
             System.out.println("a >= b");
-        } else System.out.println("a < b");
+        } else {System.out.println("a < b");}
     }
 
 //Задание №5
     public static boolean checkSumInRange(int num1, int num2) {
         int sum = num1 + num2;
-        boolean result = sum >= 10 && sum <= 20;
-        System.out.println(result);
-        return result;
+        System.out.println(sum >= 10 && sum <= 20);
+        return sum >= 10 && sum <= 20;
     }
     
 //Задание №6
@@ -80,9 +83,8 @@ public class Lesson4 {
 
 //Задание №7
     public static boolean isNegative(int number) {
-        boolean result = number < 0;
-        System.out.println(result);
-        return result;
+        System.out.println(number < 0);
+        return number < 0;
     }      
 
 
@@ -95,13 +97,14 @@ public class Lesson4 {
 
 //Задание №9
     public static boolean isLeapYear(int year) {
-        boolean result = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
-        System.out.println(result);
-        return result;
+        System.out.println((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0));
+        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
     }
 
 //Задание №10
     public static void flipTheNumbers(int[] array) {
+        System.out.println("Массив до замены: " + Arrays.toString(array));
+        
         for (int i = 0; i < array.length; i++) {
             if (array[i] == 0) {
                 array[i] = 1;
@@ -109,27 +112,22 @@ public class Lesson4 {
                 array[i] = 0;
             }
         }
-        System.out.print("Массив после замены: ");
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
+        System.out.println("Массив после замены: " + Arrays.toString(array));
     }
 
 //Задание №11
     public static void fillArrayWithValues(int[] array) {
+        System.out.println("Массив до замены: " + Arrays.toString(array));
+
         for (int i = 0; i < array.length; i++) {
             array[i] = i + 1;
         }
         System.out.println();
-        System.out.println("Массив после заполнения: ");
-        for (int i : array) {
-        System.out.print(i + " ");
-    }
-    System.out.println();
+        System.out.println("Массив после заполнения: " + Arrays.toString(array));
     }
 
 //Задание №12
-    public static void multiplyByTwoIfLessThanSix(int[] array) {
+    public static void multiplyByTwo(int[] array) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 6) {
             array[i] *= 2;
@@ -145,13 +143,14 @@ public class Lesson4 {
 //Задание №13
     public static void createSquareMatrix(int n) {
         int[][] array = new int[n][n]; 
-        System.out.println("Диагональ заполнена: ");
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
+        
+        System.out.println("Диагональ заполнена: " );
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
                 if (i == j) {
                     array[i][j] = 1; 
                 }
-                System.out.print(array[i][j] + " "); 
+                System.out.print(Arrays.toString(array[i])); 
             }
             System.out.println();
         }
@@ -160,11 +159,11 @@ public class Lesson4 {
 //Задание №14
     public static int[] createArray(int len, int initialValue) {
         int[] array = new int[len];
-        System.out.println("Массив создан: "); 
+        System.out.println("Пустой массив создан: " + Arrays.toString(array)); 
         for (int i = 0; i < len; i++) {
-            array[i] = initialValue; 
-            System.out.print(array[i] + " "); 
+            array[i] = initialValue;  
         }
+        System.out.println("Массив заполенен: " + Arrays.toString(array));
         return array; 
     }
 }
