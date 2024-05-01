@@ -1,3 +1,5 @@
+package Lesson_4;
+
 import java.util.Arrays;
 
 public class Lesson4 {
@@ -62,7 +64,9 @@ public class Lesson4 {
         int b = 9;
         if (a >= b) {
             System.out.println("a >= b");
-        } else {System.out.println("a < b");}
+        } else {
+            System.out.println("a < b");
+        }
     }
 
 //Задание №5
