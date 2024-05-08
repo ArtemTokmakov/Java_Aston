@@ -17,10 +17,8 @@ public class Park {
     }
 
     public void displayAttractionInfo() {
-        System.out.println("Название парка: " + getParkName());
-        System.out.println("Название аттракциона: " + attraction.getName());
-        System.out.println("Время работы: " + attraction.getTime());
-        System.out.println("Цена: " + attraction.getCost() + " руб.");
+        System.out.println("Название парка: " + getParkName() + "\nНазвание аттракциона: " + attraction.getName() + "\nВремя работы: "
+            + attraction.getTime() + "\nЦена: " + attraction.getCost() + " руб.\n");
     }
 
     private class Attraction {

@@ -19,13 +19,8 @@ public class Employee {
     }
 
     public void printInfo() {
-        System.out.println("ФИО: " + fullName);
-        System.out.println("Должность: " + position);
-        System.out.println("Email: " + email);
-        System.out.println("Телефон: " + phoneNumber);
-        System.out.println("Зарплата: " + salary);
-        System.out.println("Возраст: " + age);
-        System.out.println();
+        System.out.println("ФИО: " + fullName + "\nДолжность: " + position + "\nEmail: " + email + "\nТелефон: "
+            + phoneNumber + "\nЗарплата: " + salary + "\nВозраст: " + age + "\n");
     }
 
     public static void main(String[] args) {
