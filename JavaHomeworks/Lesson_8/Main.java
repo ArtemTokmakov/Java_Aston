@@ -14,7 +14,7 @@ public class Main {
             int sum = sumArrayElements(array);
             System.out.println("Сумма всех элементов массива: " + sum);
         } catch (MyArraySizeException | MyArrayDataException e) {
-            System.out.println(e.getMessage());
+            System.err.println(e.getMessage());
         }
     }
 
